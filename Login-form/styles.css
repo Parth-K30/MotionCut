@@ -54,7 +54,7 @@ body {
 }
 @keyframes moveGirl {
     0% {
-        transform: translateX(-1000px) scaleX(1);
+        transform: translateX(-100vw) scaleX(1);
     }
     49.99% {
         transform: translateX(100vw) scaleX(1);
@@ -63,9 +63,10 @@ body {
         transform: translateX(100vw) scaleX(-1);
     }
     100% {
-        transform: translateX(-1000px) scaleX(-1);
+        transform: translateX(-100vw) scaleX(-1);
     }
 }
+
 
 .login-box {
     width: 300px;
