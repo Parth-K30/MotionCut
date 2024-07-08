@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('trees.png'),url('bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #780000;
+}
+
+.animation-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.leaf {
+    position: absolute;
+    top: -50px; /* Start just above the viewport */
+    width: 50px; /* Adjust size as needed */
+    opacity: 0.8;
+    animation: fall linear infinite;
+    animation-play-state: paused; /* Pause the animation initially */
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); /* Move to the bottom of the viewport */
+    }
+}
+
+.animated-girl {
+    position: absolute;
+    bottom: 200px;
+    width: 350px; /* Adjust size as needed */
+    animation: moveGirl 15s infinite;
+}
+@keyframes moveGirl {
+    0% {
+        transform: translateX(-1000px) scaleX(1);
+    }
+    49.99% {
+        transform: translateX(100vw) scaleX(1);
+    }
+    50% {
+        transform: translateX(100vw) scaleX(-1);
+    }
+    100% {
+        transform: translateX(-1000px) scaleX(-1);
+    }
+}
+
+.login-box {
+    width: 300px;
+    padding: 40px;
+    position: relative;
+    background: rgba(255, 255, 255, 0.3); /* 80% transparent */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px); /* Blur effect */
+}
+
+.login-box h1 {
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+.textbox {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.textbox input {
+    width: 100%;
+    padding: 10px;
+    background: #f2f2f2;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+.btn {
+    width: 100%;
+    background: #780000;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #fff;
+    box-sizing: border-box; 
+}
+
+.btn:hover {
+    background: #e74c3c;
+}
+
+.bottom-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.bottom-links a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #780000;
+}
+
+#signup {
+    text-decoration: underline;
+}
+
+.textbox input::placeholder {
+    color: #780000;
+    padding-left: 0.5rem;
+}
