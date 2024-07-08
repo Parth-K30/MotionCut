@@ -30,11 +30,11 @@ body {
 
 .leaf {
     position: absolute;
-    top: -50px; /* Start just above the viewport */
-    width: 50px; /* Adjust size as needed */
+    top: -50px; 
+    width: 50px; 
     opacity: 0.8;
     animation: fall linear infinite;
-    animation-play-state: paused; /* Pause the animation initially */
+    animation-play-state: paused; 
 }
 
 @keyframes fall {
@@ -42,16 +42,18 @@ body {
         transform: translateY(-50px) rotate(0deg);
     }
     100% {
-        transform: translateY(100vh) rotate(360deg); /* Move to the bottom of the viewport */
+        transform: translateY(100vh) rotate(360deg); 
     }
 }
 
 .animated-girl {
     position: absolute;
     bottom: 200px;
-    width: 350px; /* Adjust size as needed */
+    width: 350px;
     animation: moveGirl 15s infinite;
+    transform-origin: bottom center; 
 }
+
 @keyframes moveGirl {
     0% {
         transform: translateX(-100vw) scaleX(1);
@@ -72,11 +74,11 @@ body {
     width: 300px;
     padding: 40px;
     position: relative;
-    background: rgba(255, 255, 255, 0.3); /* 80% transparent */
+    background: rgba(255, 255, 255, 0.3); 
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px); /* Blur effect */
+    backdrop-filter: blur(10px); 
 }
 
 .login-box h1 {
